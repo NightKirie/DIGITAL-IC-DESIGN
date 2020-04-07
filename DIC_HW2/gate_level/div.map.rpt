@@ -1,5 +1,5 @@
 Analysis & Synthesis report for div
-Tue Mar 31 17:09:29 2020
+Tue Apr 07 14:57:46 2020
 Quartus II Version 10.0 Build 262 08/18/2010 Service Pack 1 SJ Full Version
 
 
@@ -42,7 +42,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Mar 31 17:09:29 2020          ;
+; Analysis & Synthesis Status        ; Successful - Tue Apr 07 14:57:46 2020          ;
 ; Quartus II Version                 ; 10.0 Build 262 08/18/2010 SP 1 SJ Full Version ;
 ; Revision Name                      ; div                                            ;
 ; Top-level Entity Name              ; div                                            ;
@@ -254,7 +254,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 10.0 Build 262 08/18/2010 Service Pack 1 SJ Full Version
-    Info: Processing started: Tue Mar 31 17:09:28 2020
+    Info: Processing started: Tue Apr 07 14:57:45 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off div -c div
 Info: Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info: Found 1 design units, including 1 entities, in source file /code/git/digital-ic-design/dic_hw2/div.v
@@ -284,8 +284,8 @@ Info: Implemented 327 device resources after synthesis - the final resource coun
     Info: Implemented 9 output pins
     Info: Implemented 302 logic cells
 Info: Quartus II Analysis & Synthesis was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 271 megabytes
-    Info: Processing ended: Tue Mar 31 17:09:29 2020
+    Info: Peak virtual memory: 270 megabytes
+    Info: Processing ended: Tue Apr 07 14:57:46 2020
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

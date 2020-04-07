@@ -1,5 +1,5 @@
 Assembler report for AS
-Tue Mar 31 16:31:19 2020
+Tue Apr 07 14:33:18 2020
 Quartus II Version 10.0 Build 262 08/18/2010 Service Pack 1 SJ Full Version
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Tue Mar 31 16:31:19 2020 ;
+; Assembler Status      ; Successful - Tue Apr 07 14:33:18 2020 ;
 ; Revision Name         ; AS                                    ;
 ; Top-level Entity Name ; AS                                    ;
 ; Family                ; Cyclone II                            ;
@@ -117,13 +117,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Assembler
     Info: Version 10.0 Build 262 08/18/2010 Service Pack 1 SJ Full Version
-    Info: Processing started: Tue Mar 31 16:31:17 2020
+    Info: Processing started: Tue Apr 07 14:33:16 2020
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off AS -c AS
 Info: Writing out detailed assembly data for power analysis
 Info: Assembler is generating device programming files
 Info: Quartus II Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 373 megabytes
-    Info: Processing ended: Tue Mar 31 16:31:19 2020
+    Info: Peak virtual memory: 374 megabytes
+    Info: Processing ended: Tue Apr 07 14:33:18 2020
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

@@ -9,7 +9,7 @@ r1
 31
 IZ^476olahHU]P@KYzTEQD2
 Z0 dD:\Code\git\DIGITAL-IC-DESIGN\DIC_HW1
-w1585643480
+w1586241200
 8D:/Code/git/DIGITAL-IC-DESIGN/DIC_HW1/AS.vo
 FD:/Code/git/DIGITAL-IC-DESIGN/DIC_HW1/AS.vo
 L0 31
@@ -17,11 +17,11 @@ Z1 OL;L;10.1c;51
 Z2 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
 n@a@s
 !s85 0
-!i10b 1
 !s100 z9=Zb7ck<M_EOcQbRlU^=1
-!s108 1585643743.381000
+!s108 1586241464.712000
 !s107 D:/Code/git/DIGITAL-IC-DESIGN/DIC_HW1/AS.vo|
 !s90 -reportprogress|300|-work|work|-vopt|D:/Code/git/DIGITAL-IC-DESIGN/DIC_HW1/AS.vo|
+!i10b 1
 vAS_tb
 V=DKh6YRP;IlD6hfVjoNMY0
 r1
@@ -38,7 +38,7 @@ n@a@s_tb
 !s85 0
 !s100 TVEOYE[YN;6?[:PkaeA<91
 !s90 -reportprogress|300|-work|work|-vopt|D:/Code/git/DIGITAL-IC-DESIGN/DIC_HW1/AS_tb.v|
-!s108 1585643740.464000
+!s108 1586241464.619000
 !s107 D:/Code/git/DIGITAL-IC-DESIGN/DIC_HW1/AS_tb.v|
 !i10b 1
 vcycloneii_and1
@@ -52,7 +52,7 @@ L0 346
 R1
 r1
 31
-Z7 !s108 1585643740.555000
+Z7 !s108 1586241464.840000
 Z8 !s107 D:/Code/git/DIGITAL-IC-DESIGN/DIC_HW1/cycloneii_atoms.v|
 Z9 !s90 -reportprogress|300|-work|work|-vopt|D:/Code/git/DIGITAL-IC-DESIGN/DIC_HW1/cycloneii_atoms.v|
 R2

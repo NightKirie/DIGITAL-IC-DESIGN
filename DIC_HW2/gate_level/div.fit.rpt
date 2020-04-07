@@ -1,5 +1,5 @@
 Fitter report for div
-Tue Mar 31 17:09:35 2020
+Tue Apr 07 14:57:51 2020
 Quartus II Version 10.0 Build 262 08/18/2010 Service Pack 1 SJ Full Version
 
 
@@ -63,7 +63,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                      ;
 +------------------------------------+------------------------------------------------+
-; Fitter Status                      ; Successful - Tue Mar 31 17:09:35 2020          ;
+; Fitter Status                      ; Successful - Tue Apr 07 14:57:51 2020          ;
 ; Quartus II Version                 ; 10.0 Build 262 08/18/2010 SP 1 SJ Full Version ;
 ; Revision Name                      ; div                                            ;
 ; Top-level Entity Name              ; div                                            ;
@@ -1759,7 +1759,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II Fitter
     Info: Version 10.0 Build 262 08/18/2010 Service Pack 1 SJ Full Version
-    Info: Processing started: Tue Mar 31 17:09:30 2020
+    Info: Processing started: Tue Apr 07 14:57:46 2020
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off div -c div
 Info: Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info: Selected device EP2C70F896C8 for design "div"
@@ -1821,7 +1821,7 @@ Info: I/O bank details before I/O pin placement
         Info: I/O bank number 6 does not use VREF pins and has undetermined VCCIO pins. 1 total pin(s) used --  80 pins available
         Info: I/O bank number 7 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  74 pins available
         Info: I/O bank number 8 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  72 pins available
-Info: Fitter preparation operations ending: elapsed time is 00:00:01
+Info: Fitter preparation operations ending: elapsed time is 00:00:00
 Info: Fitter placement preparation operations beginning
 Info: Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info: Fitter placement operations beginning
@@ -1850,9 +1850,9 @@ Warning: The Reserve All Unused Pins setting has not been specified, and will de
 Info: Generated suppressed messages file D:/Code/git/DIGITAL-IC-DESIGN/DIC_HW2/gate_level/div.fit.smsg
 Info: Quartus II Fitter was successful. 0 errors, 4 warnings
     Info: Peak virtual memory: 440 megabytes
-    Info: Processing ended: Tue Mar 31 17:09:35 2020
+    Info: Processing ended: Tue Apr 07 14:57:51 2020
     Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:07
+    Info: Total CPU time (on all processors): 00:00:06
 
 
 +----------------------------+
