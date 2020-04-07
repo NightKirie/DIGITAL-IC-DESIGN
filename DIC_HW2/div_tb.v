@@ -59,7 +59,7 @@ initial begin
     $display("There are %d errors!", err);
   end
     
-  #10 $stop;
+  #10 $finish;
 end 
 
 always@(err) begin
