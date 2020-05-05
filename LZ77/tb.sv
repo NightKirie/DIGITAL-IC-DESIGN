@@ -118,7 +118,7 @@ begin
         if(wait_valid && valid)
         begin
 
-            if(encode) // Check encoding answer
+            if(encode_reg) // Check encoding answer
             begin
 
                 wait_valid = 0;
@@ -131,7 +131,12 @@ begin
                 buff_char_nxt[encode_cnt] = char_nxt;
                 encode_cnt = encode_cnt + 1;
 
-                if ((get_offset == gold_offset) && (get_match_len == gold_match_len) && (get_char_nxt == gold_char_nxt))
+                if (!encode)
+                begin
+                    allpass = 0;
+                    $display("cycle %2h, expect encoding, but encode signal is low >> Fail",cycle);
+                end
+                else if ((get_offset === gold_offset) && (get_match_len === gold_match_len) && (get_char_nxt === gold_char_nxt))
                     $display("cycle %2h, expect(%h,%h,%c) , get(%h,%h,%c) >> Pass",cycle,gold_offset,gold_match_len,gold_char_nxt,get_offset,get_match_len,get_char_nxt);
                 else
                 begin
@@ -149,7 +154,12 @@ begin
                     wait_valid = 0;
 
                 get_char_nxt = char_nxt;
-                if(get_char_nxt != gold_char_nxt)
+                if (encode)
+                begin
+                    allpass = 0;
+                    $display("cycle %2h, expect decoding, but encode signal is high >> Fail",cycle);
+                end
+                else if(get_char_nxt !== gold_char_nxt)
                 begin
                     allpass = 0;
                     $display("cycle %2h, failed to decode %s, expect %c, get %c >> Fail",cycle,strdata,gold_char_nxt,get_char_nxt);
