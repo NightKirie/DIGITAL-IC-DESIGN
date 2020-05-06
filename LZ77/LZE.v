@@ -21,9 +21,9 @@ reg [4:0] search_buff_idx;
 reg [4:0] look_ahead_buff_idx;
 reg find_match;
 reg [3:0] pointer;
-reg [3:0] temp_offset;
-reg [3:0] temp_match_len;
-reg [7:0] temp_char_nxt;
+reg [3:0] max_offset;
+reg [3:0] max_match_len;
+reg [7:0] max_char_nxt;
 reg [2:0] curr_state, next_state;
 
 parameter LOAD_ENCODE = 3'd0;
@@ -51,7 +51,7 @@ always @(posedge clk, posedge reset) begin
         look_ahead_buff_idx <= 0;
         find_match <= 0;
         pointer <= 0;
-        temp_match_len <= 0;
+        max_match_len <= 0;
 
         curr_state <= LOAD_ENCODE;
     end
@@ -68,60 +68,49 @@ always @(posedge clk, posedge reset) begin
                 /* Not ready to encode */
                 valid <= 0;
                 encode <= 0;
-                if(code_buff[pointer] == code_buff[look_ahead_buff_idx + temp_match_len]) begin
-                    temp_offset <= search_buff_len - pointer - 1;
-                    temp_match_len <= 1;
-                    temp_char_nxt <= code_buff[look_ahead_buff_idx + temp_match_len + 1];
+                if(code_buff[pointer] == code_buff[look_ahead_buff_idx + max_match_len] && search_buff_len != 0) begin
+                    offset <= search_buff_len - pointer - 1;
+                    match_len <= 1;
+                    char_nxt <= code_buff[look_ahead_buff_idx + max_match_len + 1];
                 end
-                // /* If already find first match in this substring */
-                // if(find_match) begin
-                   
-                // end
-                // /* If no char match in this substring */
-                // else begin
-                //     /* If find first match char */
-                //     if(code_buff[pointer] == code_buff[look_ahead_buff_idx]) begin
-                //         temp_offset <= search_buff_len - pointer - 1;
-                //         temp_match_len <= 1;
-                //         temp_char_nxt <= code_buff[look_ahead_buff_idx + 1];
-                //         find_match <= 1;
-                //     end
-                // end
                 pointer <= pointer + 1;
             end
             CHANGE_SUBSTRING: begin
                 search_buff_idx <= search_buff_idx + 1;
                 pointer <= search_buff_idx + 1;  
                 find_match <= 0;
-                if(temp_match_len == 0 && match_len == 0) begin
-                    match_len <= 0;
-                    offset <= 0;
-                    char_nxt <= code_buff[look_ahead_buff_idx];
+                if(max_match_len == 0 && match_len == 0) begin
+                    max_offset <= 0;
+                    max_match_len <= 0;
+                    max_char_nxt <= code_buff[look_ahead_buff_idx];
                 end
-                else if(temp_match_len > match_len) begin
-                    match_len <= temp_match_len;
-                    offset <= temp_offset;
-                    char_nxt <= temp_char_nxt;
+                else if(match_len > max_match_len) begin
+                    max_offset <= offset;
+                    max_match_len <= match_len;
+                    max_char_nxt <= char_nxt;
                 end
             end
             ENCODE: begin
                 /* Ready to output encode */
                 valid <= 1;
                 encode <= 1;
-                /* Reset the temp_match_len */
-                temp_match_len <= 0;
+                match_len <= max_match_len;
+                offset <= max_offset;
+                char_nxt <= max_char_nxt;
+                /* Reset the max_match_len */
+
+                max_match_len <= 0;
                 /* If search_buff_len > max_search_buff_len after this encode, need to adjust code_buff_idx */
                 if(search_buff_len + match_len + 1 > max_search_buff_len) begin
                     {code_buff_idx, search_buff_idx, pointer} <= {3 {code_buff_idx + search_buff_len + match_len + 1 - max_search_buff_len} };
                     search_buff_len <= max_search_buff_len;
-                    look_ahead_buff_idx <= code_buff_idx + search_buff_len + match_len + 1;
                 end
                 /* If search_buff_len <= max_search_buff_len after this encode */
                 else begin
                     {search_buff_idx, pointer} <= {2 {code_buff_idx} };
                     search_buff_len <= search_buff_len + match_len + 1;
-                    look_ahead_buff_idx <= code_buff_idx + search_buff_len + match_len + 1;
                 end
+                look_ahead_buff_idx <= look_ahead_buff_idx + match_len + 1;
             end
             LOAD_DECODE: begin
                 
@@ -150,13 +139,13 @@ always @(*) begin
         //     next_state = (search_buff_idx == code_buff_len - 1) ? LOAD_DECODE : COMPARE_SUBSTRING;
         // end
         COMPARE_SUBSTRING: begin
-           next_state = 
+           next_state = (pointer == look_ahead_buff_idx - 1 || search_buff_len == 0) ? CHANGE_SUBSTRING : COMPARE_SUBSTRING;
         end
         CHANGE_SUBSTRING: begin
-
+            next_state = (search_buff_idx == look_ahead_buff_idx - 1 || search_buff_len == 0) ? ENCODE : COMPARE_SUBSTRING;
         end
         ENCODE: begin
-
+            next_state = (look_ahead_buff_idx + match_len + 1 == code_buff_len) ? LOAD_DECODE : COMPARE_SUBSTRING;
         end
     endcase
 end
