@@ -8,38 +8,38 @@ VBDVi5C=HB[[e?lJMTRgd]3
 r1
 !s85 0
 31
-IaM`j60G4RA:d@b7E1^5km2
-Z0 dD:\Code\git\DIGITAL-IC-DESIGN\LZ77
-w1588776399
-8D:\Code\git\DIGITAL-IC-DESIGN\LZ77\LZE.v
-FD:\Code\git\DIGITAL-IC-DESIGN\LZ77\LZE.v
+IQGe5:>P064ki`f?k:WigK3
+Z0 dC:\Code\git\DIGITAL-IC-DESIGN\LZ77
+w1589108104
+8C:/Code/git/DIGITAL-IC-DESIGN/LZ77/LZE.v
+FC:/Code/git/DIGITAL-IC-DESIGN/LZ77/LZE.v
 L0 1
 Z1 OL;L;10.1c;51
 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
 n@l@z@e
-!s90 -reportprogress|300|-work|work|-vopt|D:\Code\git\DIGITAL-IC-DESIGN\LZ77\LZE.v|
-!s100 XTTMN07[MXnJdo=SlNJ212
-!s108 1588776401.275000
-!s107 D:\Code\git\DIGITAL-IC-DESIGN\LZ77\LZE.v|
+!s100 W@bW5MM[0@Y2[=GQ<QWca3
+!s90 -reportprogress|300|-work|work|-vopt|C:/Code/git/DIGITAL-IC-DESIGN/LZ77/LZE.v|
+!s108 1589108273.369000
+!s107 C:/Code/git/DIGITAL-IC-DESIGN/LZ77/LZE.v|
 !i10b 1
 vtestfixture
 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
 VKBIIT=eCh7cJh[^JXBGX00
 r1
 31
-IgV[k_`mEOT<682@SU=I_91
+IJa:3BBE[n?T;AW71kI<4>1
 S1
-Z2 dD:\Code\git\DIGITAL-IC-DESIGN\LZ77
-w1588656523
-8D:/Code/git/DIGITAL-IC-DESIGN/LZ77/tb.sv
-FD:/Code/git/DIGITAL-IC-DESIGN/LZ77/tb.sv
+Z2 dC:\Code\git\DIGITAL-IC-DESIGN\LZ77
+w1588993843
+8C:/Code/git/DIGITAL-IC-DESIGN/LZ77/tb.sv
+FC:/Code/git/DIGITAL-IC-DESIGN/LZ77/tb.sv
 L0 5
 R1
 o-work work -sv -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
 !s85 0
-!s100 TU`04al4fW0_DnbeJY;^R2
+!s100 U8[8lhGcTUj5AgEFkncO]2
 !s105 tb_sv_unit
-!s90 -reportprogress|300|-work|work|-vopt|-sv|D:/Code/git/DIGITAL-IC-DESIGN/LZ77/tb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|C:/Code/git/DIGITAL-IC-DESIGN/LZ77/tb.sv|
 !i10b 1
-!s108 1588776401.353000
-!s107 D:/Code/git/DIGITAL-IC-DESIGN/LZ77/tb.sv|
+!s108 1589108273.464000
+!s107 C:/Code/git/DIGITAL-IC-DESIGN/LZ77/tb.sv|
