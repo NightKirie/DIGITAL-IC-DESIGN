@@ -45,7 +45,6 @@ always @(posedge clk, posedge reset) begin
         busy <= 0;
         offset <= 0;
         match_len <= 0;
-        char_nxt <= 0;
         
         code_buff_len <= 0;
         code_buff_idx <= 0;
@@ -53,6 +52,7 @@ always @(posedge clk, posedge reset) begin
         search_buff_len <= 0;
         look_ahead_buff_idx <= 0;
         pointer <= 0;
+        max_offset <= 0;
         max_match_len <= 0;
         temp_match_len <= 0;
         last_decode <= 0;
@@ -65,13 +65,14 @@ always @(posedge clk, posedge reset) begin
             LOAD_ENCODE: begin
                 code_buff[code_buff_len] <= chardata;
                 code_buff_len <= code_buff_len + 1;
+                max_char_nxt <= code_buff[0];
             end
             COMPARE_SUBSTRING: begin
                 busy <= 1;
                 /* Not ready to encode */
                 valid <= 0;
                 encode <= 0;
-                if(code_buff[pointer] == code_buff[look_ahead_buff_idx + temp_match_len] && search_buff_len != 0) begin
+                if(code_buff[pointer] == code_buff[look_ahead_buff_idx + temp_match_len]) begin
                     if(temp_match_len == 0) begin
                         temp_offset <= look_ahead_buff_idx - pointer - 1;
                         temp_match_len <= 1;
@@ -164,18 +165,6 @@ always @(posedge clk, posedge reset) begin
                 char_nxt <= code_buff[look_ahead_buff_idx];
                 look_ahead_buff_idx <= look_ahead_buff_idx + 1;
                 search_buff_len <= search_buff_len - 1;     
-                // if (search_buff_len != 0) begin
-                //     curr_state <= DECODE;
-                // end
-                // else begin
-                //     if (chardata == 8'h45) begin
-                //         curr_state <= PRE_LOAD_ENCODE;
-                //     end
-                //     else begin
-                //         curr_state <= LOAD_DECODE;
-                //     end
-                // end
-                // //curr_state <= (chardata == 8'h45) ? PRE_LOAD_ENCODE : LOAD_DECODE;
             end
             PRE_LOAD_ENCODE: begin
                 valid <= 0;
@@ -185,6 +174,8 @@ always @(posedge clk, posedge reset) begin
                 search_buff_len <= 0;
                 look_ahead_buff_idx <= 0;
                 last_decode <= 0;
+                max_offset <= 0;
+                max_match_len <= 0;
             end
         endcase
     end
@@ -193,13 +184,13 @@ end
 always @(*) begin
     case (curr_state)
         LOAD_ENCODE: begin
-            next_state = (code_valid) ? LOAD_ENCODE : COMPARE_SUBSTRING;
+            next_state = (code_valid) ? LOAD_ENCODE : ENCODE;
         end
         COMPARE_SUBSTRING: begin
-           next_state = (pointer == code_buff_len - 1 || pointer - search_buff_idx == max_look_ahead_buff_len - 2 || search_buff_len == 0 || (code_buff[pointer] != code_buff[look_ahead_buff_idx + temp_match_len] && search_buff_len != 0)) ? CHANGE_SUBSTRING : COMPARE_SUBSTRING;
+           next_state = (pointer == code_buff_len - 1 || pointer - search_buff_idx == max_look_ahead_buff_len - 2 || (code_buff[pointer] != code_buff[look_ahead_buff_idx + temp_match_len] && search_buff_len != 0)) ? CHANGE_SUBSTRING : COMPARE_SUBSTRING;
         end
         CHANGE_SUBSTRING: begin
-            next_state = (search_buff_idx == look_ahead_buff_idx - 1 || search_buff_len == 0 || temp_match_len == max_look_ahead_buff_len - 1) ? ENCODE : COMPARE_SUBSTRING;
+            next_state = (search_buff_idx == look_ahead_buff_idx - 1 || temp_match_len == max_look_ahead_buff_len - 1) ? ENCODE : COMPARE_SUBSTRING;
         end
         ENCODE: begin
             next_state = (look_ahead_buff_idx + max_match_len + 1 == code_buff_len) ? LOAD_DECODE : COMPARE_SUBSTRING;

@@ -1,0 +1,11 @@
+
+State Machine - |LZE|curr_state
+Name curr_state.PRE_LOAD_ENCODE curr_state.DECODE curr_state.COPY_STR curr_state.LOAD_DECODE curr_state.ENCODE curr_state.CHANGE_SUBSTRING curr_state.COMPARE_SUBSTRING curr_state.LOAD_ENCODE 
+curr_state.LOAD_ENCODE 0 0 0 0 0 0 0 0 
+curr_state.COMPARE_SUBSTRING 0 0 0 0 0 0 1 1 
+curr_state.CHANGE_SUBSTRING 0 0 0 0 0 1 0 1 
+curr_state.ENCODE 0 0 0 0 1 0 0 1 
+curr_state.LOAD_DECODE 0 0 0 1 0 0 0 1 
+curr_state.COPY_STR 0 0 1 0 0 0 0 1 
+curr_state.DECODE 0 1 0 0 0 0 0 1 
+curr_state.PRE_LOAD_ENCODE 1 0 0 0 0 0 0 1 

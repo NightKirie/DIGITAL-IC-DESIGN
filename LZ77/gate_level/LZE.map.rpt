@@ -1,0 +1,389 @@
+Analysis & Synthesis report for LZE
+Mon May 11 11:16:04 2020
+Quartus II Version 10.0 Build 262 08/18/2010 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |LZE|curr_state
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: Top-level Entity: |LZE
+ 13. Analysis & Synthesis Messages
+ 14. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                        ;
++------------------------------------+------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon May 11 11:16:04 2020          ;
+; Quartus II Version                 ; 10.0 Build 262 08/18/2010 SP 1 SJ Full Version ;
+; Revision Name                      ; LZE                                            ;
+; Top-level Entity Name              ; LZE                                            ;
+; Family                             ; Cyclone II                                     ;
+; Total logic elements               ; 1,176                                          ;
+;     Total combinational functions  ; 936                                            ;
+;     Dedicated logic registers      ; 328                                            ;
+; Total registers                    ; 328                                            ;
+; Total pins                         ; 38                                             ;
+; Total virtual pins                 ; 0                                              ;
+; Total memory bits                  ; 0                                              ;
+; Embedded Multiplier 9-bit elements ; 0                                              ;
+; Total PLLs                         ; 0                                              ;
++------------------------------------+------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C70F896C8       ;                    ;
+; Top-level entity name                                                      ; LZE                ; LZE                ;
+; Family name                                                                ; Cyclone II         ; Stratix II         ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 8           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2-8 processors         ;   0.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                 ;
++----------------------------------+-----------------+------------------------+------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path             ;
++----------------------------------+-----------------+------------------------+------------------------------------------+
+; ../LZE.v                         ; yes             ; User Verilog HDL File  ; D:/Code/git/DIGITAL-IC-DESIGN/LZ77/LZE.v ;
++----------------------------------+-----------------+------------------------+------------------------------------------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 1,176 ;
+;                                             ;       ;
+; Total combinational functions               ; 936   ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 701   ;
+;     -- 3 input functions                    ; 173   ;
+;     -- <=2 input functions                  ; 62    ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 876   ;
+;     -- arithmetic mode                      ; 60    ;
+;                                             ;       ;
+; Total registers                             ; 328   ;
+;     -- Dedicated logic registers            ; 328   ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 38    ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 328   ;
+; Total fan-out                               ; 4557  ;
+; Average fan-out                             ; 3.50  ;
++---------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                      ;
++----------------------------+-------------------+--------------+-------------+------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; |LZE                       ; 936 (936)         ; 328 (328)    ; 0           ; 0          ; 0            ; 0       ; 0         ; 38   ; 0            ; |LZE                ;              ;
++----------------------------+-------------------+--------------+-------------+------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |LZE|curr_state                                                                                                                                                                                                        ;
++------------------------------+----------------------------+-------------------+---------------------+------------------------+-------------------+-----------------------------+------------------------------+------------------------+
+; Name                         ; curr_state.PRE_LOAD_ENCODE ; curr_state.DECODE ; curr_state.COPY_STR ; curr_state.LOAD_DECODE ; curr_state.ENCODE ; curr_state.CHANGE_SUBSTRING ; curr_state.COMPARE_SUBSTRING ; curr_state.LOAD_ENCODE ;
++------------------------------+----------------------------+-------------------+---------------------+------------------------+-------------------+-----------------------------+------------------------------+------------------------+
+; curr_state.LOAD_ENCODE       ; 0                          ; 0                 ; 0                   ; 0                      ; 0                 ; 0                           ; 0                            ; 0                      ;
+; curr_state.COMPARE_SUBSTRING ; 0                          ; 0                 ; 0                   ; 0                      ; 0                 ; 0                           ; 1                            ; 1                      ;
+; curr_state.CHANGE_SUBSTRING  ; 0                          ; 0                 ; 0                   ; 0                      ; 0                 ; 1                           ; 0                            ; 1                      ;
+; curr_state.ENCODE            ; 0                          ; 0                 ; 0                   ; 0                      ; 1                 ; 0                           ; 0                            ; 1                      ;
+; curr_state.LOAD_DECODE       ; 0                          ; 0                 ; 0                   ; 1                      ; 0                 ; 0                           ; 0                            ; 1                      ;
+; curr_state.COPY_STR          ; 0                          ; 0                 ; 1                   ; 0                      ; 0                 ; 0                           ; 0                            ; 1                      ;
+; curr_state.DECODE            ; 0                          ; 1                 ; 0                   ; 0                      ; 0                 ; 0                           ; 0                            ; 1                      ;
+; curr_state.PRE_LOAD_ENCODE   ; 1                          ; 0                 ; 0                   ; 0                      ; 0                 ; 0                           ; 0                            ; 1                      ;
++------------------------------+----------------------------+-------------------+---------------------+------------------------+-------------------+-----------------------------+------------------------------+------------------------+
+
+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; curr_state~4                          ; Lost fanout        ;
+; curr_state~5                          ; Lost fanout        ;
+; curr_state~6                          ; Lost fanout        ;
+; curr_state~7                          ; Lost fanout        ;
+; Total Number of Removed Registers = 4 ;                    ;
++---------------------------------------+--------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 328   ;
+; Number of registers using Synchronous Clear  ; 28    ;
+; Number of registers using Synchronous Load   ; 29    ;
+; Number of registers using Asynchronous Clear ; 60    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 308   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |LZE|char_nxt[4]~reg0       ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |LZE|pointer[0]             ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |LZE|code_buff_idx[1]       ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |LZE|code_buff_len[0]       ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |LZE|look_ahead_buff_idx[3] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |LZE|code_buff[29][2]       ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |LZE|code_buff[28][2]       ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |LZE|code_buff[27][2]       ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |LZE|code_buff[26][2]       ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |LZE|code_buff[25][2]       ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |LZE|code_buff[24][2]       ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |LZE|code_buff[23][2]       ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |LZE|code_buff[22][6]       ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |LZE|code_buff[21][3]       ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |LZE|code_buff[20][6]       ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |LZE|code_buff[19][6]       ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |LZE|code_buff[18][1]       ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |LZE|code_buff[17][1]       ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |LZE|code_buff[16][2]       ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |LZE|code_buff[15][0]       ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |LZE|code_buff[14][1]       ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |LZE|code_buff[13][1]       ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |LZE|code_buff[12][1]       ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |LZE|code_buff[11][5]       ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |LZE|code_buff[10][3]       ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |LZE|code_buff[9][3]        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |LZE|code_buff[8][4]        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |LZE|code_buff[7][0]        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |LZE|code_buff[6][4]        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |LZE|code_buff[5][4]        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |LZE|code_buff[4][5]        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |LZE|code_buff[3][7]        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |LZE|code_buff[2][7]        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |LZE|code_buff[1][7]        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |LZE|code_buff[0][5]        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |LZE|max_char_nxt[3]        ;
+; 9:1                ; 5 bits    ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |LZE|search_buff_idx[0]     ;
+; 10:1               ; 4 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |LZE|search_buff_len[3]     ;
+; 11:1               ; 8 bits    ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; Yes        ; |LZE|temp_char_nxt[2]       ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |LZE|temp_match_len         ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |LZE|max_match_len          ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |LZE|code_buff_idx          ;
+; 4:1                ; 24 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |LZE|Mux12                  ;
+; 16:1               ; 8 bits    ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |LZE|Mux7                   ;
+; 30:1               ; 8 bits    ; 160 LEs       ; 160 LEs              ; 0 LEs                  ; No         ; |LZE|Mux37                  ;
+; 31:1               ; 8 bits    ; 160 LEs       ; 160 LEs              ; 0 LEs                  ; No         ; |LZE|code_buff              ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |LZE|Mux8                   ;
+; 11:1               ; 8 bits    ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; No         ; |LZE|Mux9                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |LZE ;
++-------------------------+-------+-----------------------------------+
+; Parameter Name          ; Value ; Type                              ;
++-------------------------+-------+-----------------------------------+
+; LOAD_ENCODE             ; 0000  ; Unsigned Binary                   ;
+; COMPARE_SUBSTRING       ; 0001  ; Unsigned Binary                   ;
+; CHANGE_SUBSTRING        ; 0010  ; Unsigned Binary                   ;
+; ENCODE                  ; 0011  ; Unsigned Binary                   ;
+; LOAD_DECODE             ; 0100  ; Unsigned Binary                   ;
+; COPY_STR                ; 0101  ; Unsigned Binary                   ;
+; DECODE                  ; 0110  ; Unsigned Binary                   ;
+; PRE_LOAD_ENCODE         ; 0111  ; Unsigned Binary                   ;
+; max_look_ahead_buff_len ; 8     ; Signed Integer                    ;
+; max_search_buff_len     ; 9     ; Signed Integer                    ;
++-------------------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 10.0 Build 262 08/18/2010 Service Pack 1 SJ Full Version
+    Info: Processing started: Mon May 11 11:16:01 2020
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off LZE -c LZE
+Info: Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info: Found 1 design units, including 1 entities, in source file /code/git/digital-ic-design/lz77/lze.v
+    Info: Found entity 1: LZE
+Info: Elaborating entity "LZE" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at LZE.v(67): truncated value with size 32 to match size of target (5)
+Warning (10027): Verilog HDL or VHDL warning at the LZE.v(75): index expression is not wide enough to address all of the elements in the array
+Warning (10230): Verilog HDL assignment warning at LZE.v(77): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at LZE.v(82): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at LZE.v(86): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at LZE.v(90): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at LZE.v(91): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at LZE.v(127): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at LZE.v(128): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at LZE.v(129): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at LZE.v(130): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at LZE.v(135): truncated value with size 5 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at LZE.v(136): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at LZE.v(138): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at LZE.v(145): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at LZE.v(147): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at LZE.v(153): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at LZE.v(158): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at LZE.v(159): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at LZE.v(160): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at LZE.v(166): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at LZE.v(167): truncated value with size 32 to match size of target (4)
+Warning (10027): Verilog HDL or VHDL warning at the LZE.v(190): index expression is not wide enough to address all of the elements in the array
+Info: 4 registers lost all their fanouts during netlist optimizations. The first 4 are displayed below.
+    Info: Register "curr_state~4" lost all its fanouts during netlist optimizations.
+    Info: Register "curr_state~5" lost all its fanouts during netlist optimizations.
+    Info: Register "curr_state~6" lost all its fanouts during netlist optimizations.
+    Info: Register "curr_state~7" lost all its fanouts during netlist optimizations.
+Info: Generated suppressed messages file D:/Code/git/DIGITAL-IC-DESIGN/LZ77/gate_level/LZE.map.smsg
+Info: Generating hard_block partition "hard_block:auto_generated_inst"
+Info: Implemented 1230 device resources after synthesis - the final resource count might be different
+    Info: Implemented 19 input pins
+    Info: Implemented 19 output pins
+    Info: Implemented 1192 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 23 warnings
+    Info: Peak virtual memory: 271 megabytes
+    Info: Processing ended: Mon May 11 11:16:04 2020
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in D:/Code/git/DIGITAL-IC-DESIGN/LZ77/gate_level/LZE.map.smsg.
+
+

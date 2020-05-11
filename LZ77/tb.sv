@@ -1,5 +1,5 @@
 `timescale 1ns/10ps
-`define CYCLE      20.0  
+`define CYCLE      25.0  
 `define End_CYCLE  1000000
 `define PAT        "testdata.txt"
 module testfixture();
