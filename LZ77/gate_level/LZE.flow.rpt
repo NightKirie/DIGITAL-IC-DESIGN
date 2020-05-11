@@ -1,5 +1,5 @@
 Flow report for LZE
-Mon May 11 11:16:16 2020
+Mon May 11 22:10:17 2020
 Quartus II Version 10.0 Build 262 08/18/2010 Service Pack 1 SJ Full Version
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------------+
 ; Flow Summary                                                                        ;
 +------------------------------------+------------------------------------------------+
-; Flow Status                        ; Successful - Mon May 11 11:16:16 2020          ;
+; Flow Status                        ; Successful - Mon May 11 22:10:17 2020          ;
 ; Quartus II Version                 ; 10.0 Build 262 08/18/2010 SP 1 SJ Full Version ;
 ; Revision Name                      ; LZE                                            ;
 ; Top-level Entity Name              ; LZE                                            ;
@@ -63,7 +63,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/11/2020 11:16:01 ;
+; Start date & time ; 05/11/2020 22:10:02 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; LZE                 ;
 +-------------------+---------------------+
@@ -74,7 +74,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                           ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 198112241696116.158916696114752 ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 198112241696116.158920620109456 ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                     ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim (Verilog)              ; <None>        ; --          ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                            ; --            ; --          ; eda_simulation ;
@@ -91,12 +91,12 @@ applicable agreement for further details.
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis    ; 00:00:02     ; 1.0                     ; 271 MB              ; 00:00:03                           ;
-; Fitter                  ; 00:00:06     ; 1.0                     ; 443 MB              ; 00:00:07                           ;
-; Assembler               ; 00:00:02     ; 1.0                     ; 375 MB              ; 00:00:02                           ;
+; Analysis & Synthesis    ; 00:00:03     ; 1.0                     ; 271 MB              ; 00:00:03                           ;
+; Fitter                  ; 00:00:06     ; 2.5                     ; 443 MB              ; 00:00:08                           ;
+; Assembler               ; 00:00:03     ; 1.0                     ; 375 MB              ; 00:00:02                           ;
 ; Classic Timing Analyzer ; 00:00:00     ; 1.0                     ; 224 MB              ; 00:00:00                           ;
-; EDA Netlist Writer      ; 00:00:01     ; 1.0                     ; 237 MB              ; 00:00:00                           ;
-; Total                   ; 00:00:11     ; --                      ; --                  ; 00:00:12                           ;
+; EDA Netlist Writer      ; 00:00:00     ; 1.0                     ; 237 MB              ; 00:00:01                           ;
+; Total                   ; 00:00:12     ; --                      ; --                  ; 00:00:14                           ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

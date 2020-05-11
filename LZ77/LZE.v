@@ -23,17 +23,17 @@ reg [3:0] pointer;
 reg [3:0] max_offset, temp_offset;
 reg [3:0] max_match_len, temp_match_len;
 reg [7:0] max_char_nxt, temp_char_nxt;
-reg [3:0] curr_state, next_state;
+reg [2:0] curr_state, next_state;
 reg last_decode;
 
-parameter LOAD_ENCODE = 4'd0;
-parameter COMPARE_SUBSTRING = 4'd1;
-parameter CHANGE_SUBSTRING = 4'd2;
-parameter ENCODE = 4'd3;
-parameter LOAD_DECODE = 4'd4;
-parameter COPY_STR = 4'd5;
-parameter DECODE = 4'd6;
-parameter PRE_LOAD_ENCODE = 4'd7;
+parameter LOAD_ENCODE = 3'd0;
+parameter COMPARE_SUBSTRING = 3'd1;
+parameter CHANGE_SUBSTRING = 3'd2;
+parameter ENCODE = 3'd3;
+parameter LOAD_DECODE = 3'd4;
+parameter COPY_STR = 3'd5;
+parameter DECODE = 3'd6;
+parameter PRE_LOAD_ENCODE = 3'd7;
 
 parameter max_look_ahead_buff_len = 8;
 parameter max_search_buff_len = 9;

@@ -1,5 +1,5 @@
 Fitter report for LZE
-Mon May 11 11:16:10 2020
+Mon May 11 22:10:11 2020
 Quartus II Version 10.0 Build 262 08/18/2010 Service Pack 1 SJ Full Version
 
 
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                      ;
 +------------------------------------+------------------------------------------------+
-; Fitter Status                      ; Successful - Mon May 11 11:16:10 2020          ;
+; Fitter Status                      ; Successful - Mon May 11 22:10:11 2020          ;
 ; Quartus II Version                 ; 10.0 Build 262 08/18/2010 SP 1 SJ Full Version ;
 ; Revision Name                      ; LZE                                            ;
 ; Top-level Entity Name              ; LZE                                            ;
@@ -142,12 +142,12 @@ applicable agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 8           ;
 ;                            ;             ;
-; Average used               ; 1.00        ;
+; Average used               ; 2.50        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     1 processor            ; 100.0%      ;
-;     2-4 processors         ; < 0.1%      ;
+;     2-4 processors         ;  20.0%      ;
 ;     5-8 processors         ;   0.0%      ;
 +----------------------------+-------------+
 
@@ -1782,7 +1782,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II Fitter
     Info: Version 10.0 Build 262 08/18/2010 Service Pack 1 SJ Full Version
-    Info: Processing started: Mon May 11 11:16:04 2020
+    Info: Processing started: Mon May 11 22:10:05 2020
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off LZE -c LZE
 Info: Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info: Selected device EP2C70F896C8 for design "LZE"
@@ -1927,8 +1927,8 @@ Warning: The Reserve All Unused Pins setting has not been specified, and will de
 Info: Generated suppressed messages file D:/Code/git/DIGITAL-IC-DESIGN/LZ77/gate_level/LZE.fit.smsg
 Info: Quartus II Fitter was successful. 0 errors, 4 warnings
     Info: Peak virtual memory: 443 megabytes
-    Info: Processing ended: Mon May 11 11:16:10 2020
-    Info: Elapsed time: 00:00:06
+    Info: Processing ended: Mon May 11 22:10:12 2020
+    Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:08
 
 

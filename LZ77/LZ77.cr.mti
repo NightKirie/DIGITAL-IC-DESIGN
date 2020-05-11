@@ -1,4 +1,11 @@
-D:/Code/git/DIGITAL-IC-DESIGN/LZ77/cycloneii_atoms.v {1 {vlog -work work -vopt D:/Code/git/DIGITAL-IC-DESIGN/LZ77/cycloneii_atoms.v
+D:/Code/git/DIGITAL-IC-DESIGN/LZ77/LZE.vo {1 {vlog -work work -vopt D:/Code/git/DIGITAL-IC-DESIGN/LZ77/LZE.vo
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module LZE
+
+Top level modules:
+	LZE
+
+} {} {}} D:/Code/git/DIGITAL-IC-DESIGN/LZ77/cycloneii_atoms.v {1 {vlog -work work -vopt D:/Code/git/DIGITAL-IC-DESIGN/LZ77/cycloneii_atoms.v
 Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
 -- Compiling UDP CYCLONEII_PRIM_DFFE
 -- Compiling UDP CYCLONEII_PRIM_DFFEAS
@@ -61,5 +68,12 @@ Top level modules:
 	cycloneii_clkctrl
 	cycloneii_mac_mult
 	cycloneii_mac_out
+
+} {} {}} D:/Code/git/DIGITAL-IC-DESIGN/LZ77/tb.sv {1 {vlog -work work -vopt -sv {D:\Code\git\DIGITAL-IC-DESIGN\LZ77\tb.sv}
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module testfixture
+
+Top level modules:
+	testfixture
 
 } {} {}}

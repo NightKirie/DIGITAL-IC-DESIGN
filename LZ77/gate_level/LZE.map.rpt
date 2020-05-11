@@ -1,5 +1,5 @@
 Analysis & Synthesis report for LZE
-Mon May 11 11:16:04 2020
+Mon May 11 22:10:05 2020
 Quartus II Version 10.0 Build 262 08/18/2010 Service Pack 1 SJ Full Version
 
 
@@ -45,7 +45,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon May 11 11:16:04 2020          ;
+; Analysis & Synthesis Status        ; Successful - Mon May 11 22:10:04 2020          ;
 ; Quartus II Version                 ; 10.0 Build 262 08/18/2010 SP 1 SJ Full Version ;
 ; Revision Name                      ; LZE                                            ;
 ; Top-level Entity Name              ; LZE                                            ;
@@ -233,8 +233,7 @@ Encoding Type:  One-Hot
 ; curr_state~4                          ; Lost fanout        ;
 ; curr_state~5                          ; Lost fanout        ;
 ; curr_state~6                          ; Lost fanout        ;
-; curr_state~7                          ; Lost fanout        ;
-; Total Number of Removed Registers = 4 ;                    ;
+; Total Number of Removed Registers = 3 ;                    ;
 +---------------------------------------+--------------------+
 
 
@@ -314,14 +313,14 @@ Encoding Type:  One-Hot
 +-------------------------+-------+-----------------------------------+
 ; Parameter Name          ; Value ; Type                              ;
 +-------------------------+-------+-----------------------------------+
-; LOAD_ENCODE             ; 0000  ; Unsigned Binary                   ;
-; COMPARE_SUBSTRING       ; 0001  ; Unsigned Binary                   ;
-; CHANGE_SUBSTRING        ; 0010  ; Unsigned Binary                   ;
-; ENCODE                  ; 0011  ; Unsigned Binary                   ;
-; LOAD_DECODE             ; 0100  ; Unsigned Binary                   ;
-; COPY_STR                ; 0101  ; Unsigned Binary                   ;
-; DECODE                  ; 0110  ; Unsigned Binary                   ;
-; PRE_LOAD_ENCODE         ; 0111  ; Unsigned Binary                   ;
+; LOAD_ENCODE             ; 000   ; Unsigned Binary                   ;
+; COMPARE_SUBSTRING       ; 001   ; Unsigned Binary                   ;
+; CHANGE_SUBSTRING        ; 010   ; Unsigned Binary                   ;
+; ENCODE                  ; 011   ; Unsigned Binary                   ;
+; LOAD_DECODE             ; 100   ; Unsigned Binary                   ;
+; COPY_STR                ; 101   ; Unsigned Binary                   ;
+; DECODE                  ; 110   ; Unsigned Binary                   ;
+; PRE_LOAD_ENCODE         ; 111   ; Unsigned Binary                   ;
 ; max_look_ahead_buff_len ; 8     ; Signed Integer                    ;
 ; max_search_buff_len     ; 9     ; Signed Integer                    ;
 +-------------------------+-------+-----------------------------------+
@@ -334,7 +333,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 10.0 Build 262 08/18/2010 Service Pack 1 SJ Full Version
-    Info: Processing started: Mon May 11 11:16:01 2020
+    Info: Processing started: Mon May 11 22:10:01 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off LZE -c LZE
 Info: Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info: Found 1 design units, including 1 entities, in source file /code/git/digital-ic-design/lz77/lze.v
@@ -363,11 +362,10 @@ Warning (10230): Verilog HDL assignment warning at LZE.v(160): truncated value w
 Warning (10230): Verilog HDL assignment warning at LZE.v(166): truncated value with size 32 to match size of target (5)
 Warning (10230): Verilog HDL assignment warning at LZE.v(167): truncated value with size 32 to match size of target (4)
 Warning (10027): Verilog HDL or VHDL warning at the LZE.v(190): index expression is not wide enough to address all of the elements in the array
-Info: 4 registers lost all their fanouts during netlist optimizations. The first 4 are displayed below.
+Info: 3 registers lost all their fanouts during netlist optimizations. The first 3 are displayed below.
     Info: Register "curr_state~4" lost all its fanouts during netlist optimizations.
     Info: Register "curr_state~5" lost all its fanouts during netlist optimizations.
     Info: Register "curr_state~6" lost all its fanouts during netlist optimizations.
-    Info: Register "curr_state~7" lost all its fanouts during netlist optimizations.
 Info: Generated suppressed messages file D:/Code/git/DIGITAL-IC-DESIGN/LZ77/gate_level/LZE.map.smsg
 Info: Generating hard_block partition "hard_block:auto_generated_inst"
 Info: Implemented 1230 device resources after synthesis - the final resource count might be different
@@ -376,8 +374,8 @@ Info: Implemented 1230 device resources after synthesis - the final resource cou
     Info: Implemented 1192 logic cells
 Info: Quartus II Analysis & Synthesis was successful. 0 errors, 23 warnings
     Info: Peak virtual memory: 271 megabytes
-    Info: Processing ended: Mon May 11 11:16:04 2020
-    Info: Elapsed time: 00:00:03
+    Info: Processing ended: Mon May 11 22:10:05 2020
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:03
 
 

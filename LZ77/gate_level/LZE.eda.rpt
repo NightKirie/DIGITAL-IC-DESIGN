@@ -1,5 +1,5 @@
 EDA Netlist Writer report for LZE
-Mon May 11 11:16:16 2020
+Mon May 11 22:10:17 2020
 Quartus II Version 10.0 Build 262 08/18/2010 Service Pack 1 SJ Full Version
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Mon May 11 11:16:16 2020 ;
+; EDA Netlist Writer Status ; Successful - Mon May 11 22:10:17 2020 ;
 ; Revision Name             ; LZE                                   ;
 ; Top-level Entity Name     ; LZE                                   ;
 ; Family                    ; Cyclone II                            ;
@@ -82,14 +82,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II EDA Netlist Writer
     Info: Version 10.0 Build 262 08/18/2010 Service Pack 1 SJ Full Version
-    Info: Processing started: Mon May 11 11:16:15 2020
+    Info: Processing started: Mon May 11 22:10:17 2020
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off LZE -c LZE
 Info: Generated simulation netlist will be non-hierarchical because the design has SignalTap II partitions, termination control logic and/or a design partition that contains bidirectional ports
 Info: Generated files "LZE.vo" and "LZE_v.sdo" in directory "D:/Code/git/DIGITAL-IC-DESIGN/LZ77/gate_level/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II EDA Netlist Writer was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 249 megabytes
-    Info: Processing ended: Mon May 11 11:16:16 2020
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Mon May 11 22:10:17 2020
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 
 
