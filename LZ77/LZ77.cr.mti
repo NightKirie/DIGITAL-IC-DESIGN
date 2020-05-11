@@ -1,15 +1,15 @@
-C:/Code/git/DIGITAL-IC-DESIGN/LZ77/LZE.v {1 {vlog -work work -vopt {C:\Code\git\DIGITAL-IC-DESIGN\LZ77\LZE.v}
-Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
--- Compiling module LZE
-
-Top level modules:
-	LZE
-
-} {} {}} C:/Code/git/DIGITAL-IC-DESIGN/LZ77/tb.sv {1 {vlog -work work -vopt -sv C:/Code/git/DIGITAL-IC-DESIGN/LZ77/tb.sv
+E:/code/git/DIGITAL-IC-DESIGN/LZ77/tb.sv {1 {vlog -work work -vopt -sv E:/code/git/DIGITAL-IC-DESIGN/LZ77/tb.sv
 Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
 -- Compiling module testfixture
 
 Top level modules:
 	testfixture
+
+} {} {}} E:/code/git/DIGITAL-IC-DESIGN/LZ77/LZE.v {1 {vlog -work work -vopt {E:\code\git\DIGITAL-IC-DESIGN\LZ77\LZE.v}
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module LZE
+
+Top level modules:
+	LZE
 
 } {} {}}

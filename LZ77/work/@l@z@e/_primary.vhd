@@ -2,11 +2,14 @@ library verilog;
 use verilog.vl_types.all;
 entity LZE is
     generic(
-        LOAD_ENCODE     : vl_logic_vector(0 to 2) := (Hi0, Hi0, Hi0);
-        COMPARE_SUBSTRING: vl_logic_vector(0 to 2) := (Hi0, Hi0, Hi1);
-        CHANGE_SUBSTRING: vl_logic_vector(0 to 2) := (Hi0, Hi1, Hi0);
-        \ENCODE\        : vl_logic_vector(0 to 2) := (Hi0, Hi1, Hi1);
-        LOAD_DECODE     : vl_logic_vector(0 to 2) := (Hi1, Hi0, Hi0);
+        LOAD_ENCODE     : vl_logic_vector(0 to 3) := (Hi0, Hi0, Hi0, Hi0);
+        COMPARE_SUBSTRING: vl_logic_vector(0 to 3) := (Hi0, Hi0, Hi0, Hi1);
+        CHANGE_SUBSTRING: vl_logic_vector(0 to 3) := (Hi0, Hi0, Hi1, Hi0);
+        \ENCODE\        : vl_logic_vector(0 to 3) := (Hi0, Hi0, Hi1, Hi1);
+        LOAD_DECODE     : vl_logic_vector(0 to 3) := (Hi0, Hi1, Hi0, Hi0);
+        COPY_STR        : vl_logic_vector(0 to 3) := (Hi0, Hi1, Hi0, Hi1);
+        DECODE          : vl_logic_vector(0 to 3) := (Hi0, Hi1, Hi1, Hi0);
+        PRE_LOAD_ENCODE : vl_logic_vector(0 to 3) := (Hi0, Hi1, Hi1, Hi1);
         max_look_ahead_buff_len: integer := 8;
         max_search_buff_len: integer := 9
     );
@@ -30,6 +33,9 @@ entity LZE is
     attribute mti_svvh_generic_type of CHANGE_SUBSTRING : constant is 1;
     attribute mti_svvh_generic_type of \ENCODE\ : constant is 1;
     attribute mti_svvh_generic_type of LOAD_DECODE : constant is 1;
+    attribute mti_svvh_generic_type of COPY_STR : constant is 1;
+    attribute mti_svvh_generic_type of DECODE : constant is 1;
+    attribute mti_svvh_generic_type of PRE_LOAD_ENCODE : constant is 1;
     attribute mti_svvh_generic_type of max_look_ahead_buff_len : constant is 1;
     attribute mti_svvh_generic_type of max_search_buff_len : constant is 1;
 end LZE;
